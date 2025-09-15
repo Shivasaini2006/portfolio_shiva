@@ -1,49 +1,53 @@
-// Resume Download
-function downloadResume() {
-  const pdfUrl = "ShivaSaini.pdf"; // Ensure correct file name
-  const a = document.createElement("a");
-  a.href = pdfUrl;
-  a.download = "Shiva_Saini_Resume.pdf";
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-}
+// Minimal interactive behavior: smooth scroll, hamburger, theme toggle, resume download
 
-// Navbar Toggle
-document.addEventListener("DOMContentLoaded", () => {
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navLinks = document.querySelector(".nav-links");
-  const themeToggle = document.getElementById("theme-toggle");
+document.addEventListener('DOMContentLoaded', ()=> {
+  // Smooth scroll helper
+  window.scrollToSection = id => {
+    const el = document.getElementById(id);
+    if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+  };
 
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-    menuToggle.textContent = navLinks.classList.contains("active") ? "✖" : "☰";
+  // Hamburger menu
+  const hb = document.getElementById('hamburger');
+  const nav = document.getElementById('nav-links');
+  hb && hb.addEventListener('click', ()=> nav.classList.toggle('show'));
+
+  // Close mobile menu on link click
+  document.querySelectorAll('.nav-link').forEach(a=>{
+    a.addEventListener('click', ()=> nav.classList.remove('show'));
   });
 
-  // Dark Mode Toggle
-  themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-    themeToggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+  // Theme toggle (light/dark)
+  const themeBtn = document.getElementById('theme-toggle');
+  const current = localStorage.getItem('theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme:light)').matches ? 'light' : 'dark');
+  if(current === 'light') document.body.classList.add('light-theme');
+  updateThemeIcon();
+
+  themeBtn && themeBtn.addEventListener('click', ()=>{
+    document.body.classList.toggle('light-theme');
+    localStorage.setItem('theme', document.body.classList.contains('light-theme') ? 'light' : 'dark');
+    updateThemeIcon();
   });
 
-  // Section Fade-in Animation
-  const sections = document.querySelectorAll("section");
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = "1";
-          entry.target.style.transform = "translateY(0)";
-        }
-      });
-    },
-    { threshold: 0.2 }
-  );
+  function updateThemeIcon(){
+    if(!themeBtn) return;
+    themeBtn.innerHTML = document.body.classList.contains('light-theme') ? '<i class=\"fa-solid fa-sun\"></i>' : '<i class=\"fa-solid fa-moon\"></i>';
+  }
 
-  sections.forEach((section) => {
-    section.style.opacity = "0";
-    section.style.transform = "translateY(30px)";
-    section.style.transition = "opacity 0.8s ease, transform 0.8s ease";
-    observer.observe(section);
+  // Simple reveal on scroll
+  const reveals = document.querySelectorAll('.glass-panel, .project-card, .achievement, .skill');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting) e.target.style.opacity = 1, e.target.style.transform = 'translateY(0)';
+    });
+  }, {threshold:0.12});
+  reveals.forEach(r=>{
+    r.style.opacity = 0;
+    r.style.transform = 'translateY(18px)';
+    r.style.transition = 'opacity .7s ease, transform .7s ease';
+    io.observe(r);
   });
+
+  // Resume download fallback (just link uses browser download)
+  // No extra JS required; link in HTML points to ShivaSaini.pdf
 });
