@@ -470,3 +470,30 @@ footer p {
     padding: 10px 20px;
   }
 }
+
+/* === Social Media Icons === */
+.social-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 25%;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+}
+
+.social-icons a:hover {
+  color: #fff;
+  background: var(--text-gradient);
+  transform: scale(1.2) rotate(5deg);
+  box-shadow: 0 0 20px rgba(11, 50, 94, 0.6);
+}
