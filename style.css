@@ -332,67 +332,63 @@ body {
 
 /* ================= PROJECTS ================= */
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 18px;
-}
-
-.project-card {
-  background: rgba(255, 255, 255, 0.02);
-  border-radius: 12px;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.18s;
+  gap: 40px;
 }
 
-.project-card:hover {
-  transform: translateY(-8px);
+.project-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  border-bottom: 1px solid var(--glass-border);
+  padding-bottom: 20px;
 }
 
-.project-image-row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+.project-images {
+  flex: 1 1 50%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
-.project-image-row a img {
+.project-images a img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 10px;
+  max-width: 280px;
+  border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
 }
 
-.project-image-row a:hover img {
+.project-images a:hover img {
   transform: scale(1.05);
   box-shadow: 0 6px 16px rgba(0, 240, 255, 0.25);
 }
 
-.project-content {
-  padding: 14px;
+.project-desc {
+  flex: 1 1 40%;
 }
 
-.project-gallery {
-  display: flex;
-  gap: 8px;
-  margin-top: 8px;
-  flex-wrap: wrap;
+.project-desc h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: var(--accent3);
 }
 
-.project-gallery a img {
-  width: 80px;
-  height: 56px;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  cursor: pointer;
+.project-desc p {
+  font-size: 1rem;
+  color: var(--muted);
 }
 
-.project-gallery a:hover img {
-  transform: scale(1.08);
-  box-shadow: 0 6px 16px rgba(0, 240, 255, 0.2);
+/* Mobile responsive */
+@media (max-width: 720px) {
+  .project-row {
+    flex-direction: column;
+    text-align: center;
+  }
+  .project-images {
+    justify-content: center;
+  }
 }
 
 /* ================= RESUME ================= */
