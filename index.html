@@ -6,10 +6,10 @@
   <meta name="description" content="Shiva Saini - BCA Student & aspiring Full Stack Developer. Portfolio with projects, skills, achievements and contact." />
   <title>Shiva Saini — Portfolio</title>
 
-  <!-- Font Awesome (icons) -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Lightbox2 CSS -->
+  <!-- Lightbox2 -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
 
   <!-- Main CSS -->
@@ -18,6 +18,7 @@
   <!-- Lightbox2 JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js" defer></script>
 
+  <!-- Custom JS -->
   <script defer src="script.js"></script>
 </head>
 <body>
@@ -46,6 +47,8 @@
           <a class="social" href="https://github.com/Shivasaini2006" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
           <a class="social" href="https://www.linkedin.com/in/shiva-saini-0a8b59247" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
         </div>
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="theme-btn"><i class="fa-solid fa-moon"></i></button>
       </div>
     </div>
   </nav>
@@ -61,12 +64,6 @@
         <a class="btn ghost" href="#contact">Get in Touch</a>
       </div>
     </div>
-
-    <div class="hero-shapes" aria-hidden="true">
-      <span class="shape s1"></span>
-      <span class="shape s2"></span>
-      <span class="shape s3"></span>
-    </div>
   </header>
 
   <main>
@@ -81,30 +78,10 @@
             </div>
           </div>
           <div class="about-body">
-            <p>I’m a Bachelor of Computer Applications (BCA) student at Maharshi Dayanand University, Rohtak, with a strong passion for web development and building impactful digital experiences. Currently, I’m diving deep into full-stack development, sharpening my skills in creating responsive, user-friendly, and dynamic web applications.
-
-I enjoy transforming ideas into interactive solutions and continuously exploring modern tools, frameworks, and best practices in the web ecosystem. My goal is to grow as a versatile developer who not only writes clean, efficient code but also delivers meaningful products that make a difference.
-
-🚀 Always curious, always learning — and excited to collaborate on projects that challenge my creativity and technical skills.</p>
-
+            <p>I’m a Bachelor of Computer Applications (BCA) student at Maharshi Dayanand University, Rohtak, with a strong passion for web development and building impactful digital experiences. Currently, I’m diving deep into full-stack development, sharpening my skills in creating responsive, user-friendly, and dynamic web applications.</p>
             <div class="about-info">
               <div><strong>University:</strong> Maharshi Dayanand University, Rohtak</div>
               <div><strong>Role:</strong> BCA Student / Web Developer</div>
-            </div>
-
-            <div class="about-stats">
-              <div class="stat">
-                <div class="stat-num gradient-text">Projects</div>
-                <div class="stat-val">1+ (freelance)</div>
-              </div>
-              <div class="stat">
-                <div class="stat-num gradient-text">Learning</div>
-                <div class="stat-val">Full Stack</div>
-              </div>
-              <div class="stat">
-                <div class="stat-num gradient-text">Tools</div>
-                <div class="stat-val">VS Code · GitHub · Unity</div>
-              </div>
             </div>
           </div>
         </div>
@@ -121,7 +98,7 @@ I enjoy transforming ideas into interactive solutions and continuously exploring
           <div class="skill"><div class="skill-name">JavaScript</div></div>
           <div class="skill"><div class="skill-name">C</div></div>
           <div class="skill"><div class="skill-name">C++</div></div>
-          <div class="skill"><div class="skill-name">Object Oriented Programming</div></div>
+          <div class="skill"><div class="skill-name">OOP</div></div>
           <div class="skill"><div class="skill-name">VS Code</div></div>
           <div class="skill"><div class="skill-name">GitHub</div></div>
           <div class="skill"><div class="skill-name">Unity</div></div>
@@ -139,7 +116,6 @@ I enjoy transforming ideas into interactive solutions and continuously exploring
             <h3>Freelance Project</h3>
             <p>Built a responsive Custom Clearance website for a client using HTML, CSS, and JavaScript.</p>
           </div>
-        
           <div class="achievement">
             <i class="fa-solid fa-graduation-cap ach-icon"></i>
             <h3>Ongoing Learning</h3>
@@ -150,106 +126,65 @@ I enjoy transforming ideas into interactive solutions and continuously exploring
     </section>
 
     <!-- PROJECTS -->
-<section id="projects" class="section">
-  <div class="container glass-panel">
-    <h2 class="section-title gradient-text">Projects</h2>
-    <div class="projects-grid">
-
-      <!-- Project 1: Custom Clearance -->
-      <div class="project-card">
-        <!-- Front Images -->
-        <div class="project-image-row">
-          <a href="front.png" data-lightbox="project1" data-title="Custom Clearance - Front">
-            <img src="front.png" alt="Custom Clearance Front" loading="lazy">
-          </a>
-          <a href="secondline.png" data-lightbox="project1" data-title="Custom Clearance - Page 2">
-            <img src="secondline.png" alt="Custom Clearance Page 2" loading="lazy">
-          </a>
-        </div>
-
-        <!-- Content -->
-        <div class="project-content">
-          <h3>Custom Clearance Website</h3>
-          <p>A fully responsive Custom Clearance website delivered as freelance work. Technologies: HTML, CSS, JavaScript.</p>
-
-          <!-- Hidden Gallery for Lightbox -->
-          <div class="project-gallery">
-            <a href="third.png" data-lightbox="project1" data-title="Page 3"></a>
-            <a href="fourth.png" data-lightbox="project1" data-title="Page 4"></a>
-            <a href="fifth.png" data-lightbox="project1" data-title="Page 5"></a>
+    <section id="projects" class="section">
+      <div class="container glass-panel">
+        <h2 class="section-title gradient-text">Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image-row">
+              <a href="front.png" data-lightbox="project1"><img src="front.png" alt="Project 1"></a>
+              <a href="secondline.png" data-lightbox="project1"><img src="secondline.png" alt="Project 1"></a>
+            </div>
+            <div class="project-content">
+              <h3>Custom Clearance Website</h3>
+              <p>A fully responsive freelance project built with HTML, CSS, and JavaScript.</p>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image-row">
+              <a href="digi1.png" data-lightbox="project2"><img src="digi1.png" alt="Project 2"></a>
+              <a href="digi2.png" data-lightbox="project2"><img src="digi2.png" alt="Project 2"></a>
+            </div>
+            <div class="project-content">
+              <h3>Digital Pause</h3>
+              <p>A browser extension that helps users take a break from social media addiction.</p>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- Project 2: Digital Pause -->
-      <div class="project-card">
-        <!-- Front Images -->
-        <div class="project-image-row">
-          <a href="digi1.png" data-lightbox="project2" data-title="Digital Pause - Screenshot 1">
-            <img src="digi1.png" alt="Digital Pause Screenshot 1" loading="lazy">
-          </a>
-          <a href="digi2.png" data-lightbox="project2" data-title="Digital Pause - Screenshot 2">
-            <img src="digi2.png" alt="Digital Pause Screenshot 2" loading="lazy">
-          </a>
-        </div>
-
-        <!-- Content -->
-        <div class="project-content">
-          <h3>Digital Pause</h3>
-          <p>A browser extension that helps users take a break from social media addiction.</p>
-
-          <!-- Hidden Gallery for Lightbox -->
-          <div class="project-gallery">
-            <a href="digi3.png" data-lightbox="project2" data-title="Screenshot 3"></a>
-            <a href="digi4.png" data-lightbox="project2" data-title="Screenshot 4"></a>
-            <a href="digi5.png" data-lightbox="project2" data-title="Screenshot 5"></a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- RESUME -->
     <section id="resume" class="section">
       <center>
         <div class="container glass-panel center">
-        <h2 class="section-title gradient-text">Resume</h2>
-        <a class="resume-btn" href="ShivaSaini.pdf" download>⬇ Download My Resume</a>
-      </div>
+          <h2 class="section-title gradient-text">Resume</h2>
+          <a class="resume-btn" href="Shiva_resume.pdf" download>⬇ Download My Resume</a>
+        </div>
       </center>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="section">
       <center>
-      <div class="container glass-panel">
-        <h2 class="section-title gradient-text">Contact</h2>
-        <div class="contact-grid">
-          <div class="contact-card">
-            <h3>Get in touch</h3>
-            <p>📧 <a href="mailto:shivasaini1938@gmail.com">shivasaini1938@gmail.com</a></p>
-            <p>📱 <a href="tel:+919315303561">+91 9315303561</a></p>
-          </div>
+        <div class="container glass-panel">
+          <h2 class="section-title gradient-text">Contact</h2>
+          <p>📧 <a href="mailto:shivasaini1938@gmail.com">shivasaini1938@gmail.com</a></p>
+          <p>📱 <a href="tel:+919315303561">+91 9315303561</a></p>
         </div>
-      </div>
       </center>
     </section>
   </main>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-row">
-        <p>© 2025 Shiva Saini. All rights reserved.</p>
-        <div class="social-inline">
-          <a class="social" href="https://github.com/Shivasaini2006" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
-          <a class="social" href="https://www.linkedin.com/in/shiva-saini-0a8b59247" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
-        </div>
+    <div class="container footer-row">
+      <p>© 2025 Shiva Saini. All rights reserved.</p>
+      <div class="social-inline">
+        <a class="social" href="https://github.com/Shivasaini2006" target="_blank"><i class="fab fa-github"></i></a>
+        <a class="social" href="https://www.linkedin.com/in/shiva-saini-0a8b59247" target="_blank"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
   </footer>
-
 </body>
 </html>
