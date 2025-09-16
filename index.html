@@ -9,8 +9,15 @@
   <!-- Font Awesome (icons) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <!-- Lightbox2 CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+
   <!-- Main CSS -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Lightbox2 JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js" defer></script>
+
   <script defer src="script.js"></script>
 </head>
 <body>
@@ -39,7 +46,6 @@
           <a class="social" href="https://github.com/Shivasaini2006" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
           <a class="social" href="https://www.linkedin.com/in/shiva-saini-0a8b59247" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
         </div>
-       
       </div>
     </div>
   </nav>
@@ -129,11 +135,7 @@
             <h3>Freelance Project</h3>
             <p>Built a responsive Custom Clearance website for a client using HTML, CSS, and JavaScript.</p>
           </div>
-          <div class="achievement">
-            <i class="fa-solid fa-flag ach-icon"></i>
-            <h3>5+ Mini Projects</h3>
-            <p>Completed multiple mini-projects to practice front-end and core programming concepts.</p>
-          </div>
+        
           <div class="achievement">
             <i class="fa-solid fa-graduation-cap ach-icon"></i>
             <h3>Ongoing Learning</h3>
@@ -144,40 +146,66 @@
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <div class="container glass-panel">
-        <h2 class="section-title gradient-text">Featured Projects</h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <div class="project-image">
-              <img src="front.png" alt="Custom Clearance - front" loading="lazy">
-            </div>
-            <div class="project-content">
-              <h3>Custom Clearance Website</h3>
-              <p>A fully responsive Custom Clearance website delivered as freelance work. Technologies: HTML, CSS, JavaScript.</p>
-              <div class="project-gallery">
-                <img src="secondline.png" alt="page 2" loading="lazy">
-                <img src="third.png" alt="page 3" loading="lazy">
-                <img src="fourth.png" alt="page 4" loading="lazy">
-                <img src="fifth.png" alt="page 5" loading="lazy">
-              </div>
-            </div>
-          </div>
+<section id="projects" class="section">
+  <div class="container glass-panel">
+    <h2 class="section-title gradient-text">Projects</h2>
+    <div class="projects-grid">
 
-          <!-- Add more projects if needed; placeholder using other images -->
-          <div class="project-card">
-            <div class="project-image">
-              <img src="sixth.png" alt="project preview" loading="lazy">
-            </div>
-            <div class="project-content">
-              <h3>Portfolio Screenshots</h3>
-              <p>Project screenshots and UI explorations. (Placeholders — replace as needed.)</p>
-            </div>
-          </div>
+      <!-- Project 1: Custom Clearance -->
+      <div class="project-card">
+        <!-- Front Images -->
+        <div class="project-image-row">
+          <a href="front.png" data-lightbox="project1" data-title="Custom Clearance - Front">
+            <img src="front.png" alt="Custom Clearance Front" loading="lazy">
+          </a>
+          <a href="secondline.png" data-lightbox="project1" data-title="Custom Clearance - Page 2">
+            <img src="secondline.png" alt="Custom Clearance Page 2" loading="lazy">
+          </a>
+        </div>
 
+        <!-- Content -->
+        <div class="project-content">
+          <h3>Custom Clearance Website</h3>
+          <p>A fully responsive Custom Clearance website delivered as freelance work. Technologies: HTML, CSS, JavaScript.</p>
+
+          <!-- Hidden Gallery for Lightbox -->
+          <div class="project-gallery">
+            <a href="third.png" data-lightbox="project1" data-title="Page 3"></a>
+            <a href="fourth.png" data-lightbox="project1" data-title="Page 4"></a>
+            <a href="fifth.png" data-lightbox="project1" data-title="Page 5"></a>
+          </div>
         </div>
       </div>
-    </section>
+
+      <!-- Project 2: Digital Pause -->
+      <div class="project-card">
+        <!-- Front Images -->
+        <div class="project-image-row">
+          <a href="digi1.png" data-lightbox="project2" data-title="Digital Pause - Screenshot 1">
+            <img src="digi1.png" alt="Digital Pause Screenshot 1" loading="lazy">
+          </a>
+          <a href="digi2.png" data-lightbox="project2" data-title="Digital Pause - Screenshot 2">
+            <img src="digi2.png" alt="Digital Pause Screenshot 2" loading="lazy">
+          </a>
+        </div>
+
+        <!-- Content -->
+        <div class="project-content">
+          <h3>Digital Pause</h3>
+          <p>A browser extension that helps users take a break from social media addiction.</p>
+
+          <!-- Hidden Gallery for Lightbox -->
+          <div class="project-gallery">
+            <a href="digi3.png" data-lightbox="project2" data-title="Screenshot 3"></a>
+            <a href="digi4.png" data-lightbox="project2" data-title="Screenshot 4"></a>
+            <a href="digi5.png" data-lightbox="project2" data-title="Screenshot 5"></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
     <!-- RESUME -->
     <section id="resume" class="section">
@@ -207,7 +235,6 @@
   </main>
 
   <!-- FOOTER -->
-
   <footer class="footer">
     <div class="container">
       <div class="footer-row">
@@ -219,7 +246,6 @@
       </div>
     </div>
   </footer>
-  
 
 </body>
 </html>
